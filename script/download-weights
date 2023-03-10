@@ -33,7 +33,7 @@ text_encoder = CLIPTextModel.from_pretrained(
 # To use those, the user has to manually load their preferred scheduler and pass it into DiffusionPipeline.from_pretrained().
 pipe = StableDiffusionInpaintPipeline.from_pretrained(
     model_id,
-    cache_dir=MODEL_CACHE,
+    cache_dir="pretrain/diffusers-cache",
     torch_dtype=torch.float16,
     use_auth_token=auth_token,
 )
