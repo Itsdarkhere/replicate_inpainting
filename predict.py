@@ -11,7 +11,7 @@ from huggingface_hub import hf_hub_download
 from cog import BasePredictor, Input, Path
 
 MODEL_ID = "stabilityai/stable-diffusion-2-inpainting"
-MODEL_CACHE = "pretrain/diffusers-cache"
+MODEL_CACHE = "diffusers-cache"
 
 with open("concepts.txt") as infile:
     CONCEPTS = [line.rstrip() for line in  infile]

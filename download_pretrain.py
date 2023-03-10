@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     auth_token = "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"
 
-    os.makedirs("pretrain/diffusers-cache", exist_ok=True)
+    os.makedirs("diffusers-cache", exist_ok=True)
     os.makedirs("pretrain/tokenizer", exist_ok=True)
     os.makedirs("pretrain/text_encoder", exist_ok=True)
 
@@ -45,7 +45,7 @@ if __name__ == "__main__":
 
     pipe = StableDiffusionPipeline.from_pretrained(
         pretrained_model_name_or_path,
-        cache_dir="pretrain/diffusers-cache",
+        cache_dir="diffusers-cache",
         torch_dtype=torch.float16,
         use_auth_token=auth_token,
     )

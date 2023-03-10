@@ -5,7 +5,7 @@ from diffusers import StableDiffusionInpaintPipeline
 
 
 model_id = "stabilityai/stable-diffusion-2-inpainting"
-MODEL_CACHE = "pretrain/diffusers-cache"
+MODEL_CACHE = "diffusers-cache"
 os.makedirs(MODEL_CACHE, exist_ok=True)
 
 pipe = StableDiffusionInpaintPipeline.from_pretrained(
