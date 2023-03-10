@@ -7,7 +7,7 @@ from diffusers import StableDiffusionInpaintPipeline
 from PIL import Image
 from cog import BasePredictor, Input, Path
 
-MODEL_ID = "stabilityai/stable-diffusion-2-inpainting"
+MODEL_ID = "e5a34f913de0adc560d20e002c45ad43a80031b62caacc3d84010c6b6a64870c"
 MODEL_CACHE = "diffusers-cache"
 
 
