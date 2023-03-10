@@ -1,19 +1,12 @@
 build:
   gpu: true
-  # Removal ADDON
-  # cuda: "11.3"
   python_version: "3.10"
   python_packages:
     - "diffusers==0.9.0"
-    - "torch==1.11.0 --extra-index-url=https://download.pytorch.org/whl/cu113"
-    - "torchvision==0.12.0 --extra-index-url=https://download.pytorch.org/whl/cu113"
+    - "torch==1.13.0"
     - "ftfy==6.1.1"
-    - "ipython==8.5.0"
     - "scipy==1.9.3"
-    - "pytorch-lightning==1.4.2"
     - "transformers==4.25.1"
     - "accelerate==0.15.0"
-    - "torchmetrics==0.6.0"
-    - "Pillow==9.2.0"
 
 predict: "predict.py:Predictor"
