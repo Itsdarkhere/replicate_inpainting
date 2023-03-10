@@ -10,23 +10,19 @@ with open("concepts.txt") as infile:
     CONCEPTS = [line.rstrip() for line in infile]
 
 model_id = "stabilityai/stable-diffusion-2-inpainting"
-MODEL_CACHE = "diffusers-cache"
 auth_token = "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"
-os.makedirs(MODEL_CACHE, exist_ok=True)
 os.makedirs("pretrain/diffusers-cache", exist_ok=True)
 os.makedirs("pretrain/tokenizer", exist_ok=True)
 os.makedirs("pretrain/text_encoder", exist_ok=True)
 
-pretrained_model_name_or_path = "CompVis/stable-diffusion-v1-4"
-
 tokenizer = CLIPTokenizer.from_pretrained(
-    pretrained_model_name_or_path,
+    model_id,
     subfolder="tokenizer",
     cache_dir="pretrain/tokenizer",
     use_auth_token=auth_token,
 )
 text_encoder = CLIPTextModel.from_pretrained(
-    pretrained_model_name_or_path,
+    model_id,
     subfolder="text_encoder",
     cache_dir="pretrain/text_encoder",
     use_auth_token=auth_token,
